@@ -31,14 +31,42 @@ public class PHPTravelTest {
 	public void phpTest() {
 		driver.get("https://www.phptravels.net/");
 		WebDriverWait waitPHP = new WebDriverWait(driver, 20);
-		WebElement searchCity = driver.findElement(By.xpath("//*[@id=\"s2id_autogen3\"]/a"));
-		searchCity.click();
-		searchCity.sendKeys("London");
+		WebElement searchPHP = driver.findElement(By.xpath("//*[@id=\"s2id_autogen3\"]/a"));
+		searchPHP.click();
+		searchPHP.sendKeys("London");
 		waitPHP.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//*[@id=\"select2-drop\"]/ul/li/ul/li[1]/div")));
-		searchCity = driver.findElement(By.xpath("//*[@id=\"select2-drop\"]/ul/li/ul/li[1]/div"));
-		searchCity.click();
-		// WebElement setStartDate
+		searchPHP = driver.findElement(By.xpath("//*[@id=\"select2-drop\"]/ul/li/ul/li[1]/div"));
+		searchPHP.click();
+		searchPHP = driver.findElement(By.xpath("//*[@id=\"dpd1\"]/div/input"));
+		searchPHP.click();
+		searchPHP = driver.findElement(By.xpath("/html/body/div[10]/div[1]/table/tbody/tr[6]/td[4]"));
+		searchPHP.click();
+		searchPHP = driver.findElement(By.xpath("/html/body/div[11]/div[1]/table/tbody/tr[2]/td[6]"));
+		searchPHP.click();
+		searchPHP = driver.findElement(By.xpath("//*[@id=\"hotels\"]/form/div[5]/button"));
+		searchPHP.click();
+
+		// searchPHP =
+		// driver.findElement(By.xpath("//*[@id=\"s2id_autogen1\"]/a/span[1]"));
+		// searchPHP.click();
+		// searchPHP.sendKeys("London");
+		// waitPHP.until(ExpectedConditions
+		// .visibilityOfElementLocated(By.xpath("//*[@id=\"select2-drop\"]/ul/li/ul/li[1]/div")));
+		// searchPHP =
+		// driver.findElement(By.xpath("//*[@id=\"select2-drop\"]/ul/li/ul/li[1]/div"));
+		// searchPHP.click();
+		// searchPHP = driver.findElement(By.xpath("//*[@id=\"dpd1\"]/div/input"));
+		// searchPHP.click();
+		// searchPHP =
+		// driver.findElement(By.xpath("/html/body/div[10]/div[1]/table/tbody/tr[6]/td[4]"));
+		// searchPHP.click();
+		// searchPHP =
+		// driver.findElement(By.xpath("/html/body/div[11]/div[1]/table/tbody/tr[2]/td[6]"));
+		// searchPHP.click();
+		// searchPHP =
+		// driver.findElement(By.xpath("//*[@id=\"hotels\"]/form/div[5]/button"));
+		// searchPHP.click();
 
 	}
 }
